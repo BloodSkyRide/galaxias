@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private float  Speeds = 5f;
+    [SerializeField] private float  Speeds = 5f; //
     private bool derecha;
     private bool transportar;
 
@@ -18,50 +18,27 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        
-       if(transform.position.x <= -7.6){
-
+       if(transform.position.x <= -7.6){  // evaluo el limite de la posicion del objeto, limite inferior en el eje X
         derecha = true;
-        transporter();
        }
 
-       else if(transform.position.x >= 7.6){
+       else if(transform.position.x >= 7.6){// evaluo el limite de la posicion del objeto, limite superior en el eje X
 
         derecha = false;
-        transporter();
+        
        }
 
         if(derecha == true){
-            transporter();
-            transform.position += Vector3.right * Speeds * Time.deltaTime;
+            
+            transform.position += Vector3.right * Speeds * Time.deltaTime; // si la variable derecha es positiva es porque debe moverse a la derecha
 
         }
 
        else if (derecha == false){
-
-        transporter();
-         transform.position += Vector3.left * Speeds * Time.deltaTime;
+         transform.position += Vector3.left * Speeds * Time.deltaTime; // si la variable derecha es falsa es porque debe moverse a la izquierda
        }
 
         
     }
 
-
-
-    public void transporter(){
-
-        float noSeSabe = Random.Range(0,1);
-
-        if(noSeSabe == 1){
-
-            float transborder = Random.Range(5,-5);
-            float transborder2 = Random.Range(0,3);
-            transform.position = new Vector3(transborder,transborder2,0);
-            Debug.Log("Termine mi secuencia");
-
-
-        } 
-    }
 }

@@ -15,21 +15,21 @@ public class Boss_Laser : MonoBehaviour
     void Update()
     {
 
-        if(transform.position.y <= -5){
+        if(transform.position.y <= -5){ // si el laser es menor o igual -5 en el eje y abajo se vuelve falso
 
             abajo = false;
         }
 
-        else if (transform.position.y >= 5){
+        else if (transform.position.y >= 5){ // si el laser es mayor o igual 5 en el eje y abajo se vuelve verdadero
 
             abajo = true;
         }
 
-        if(abajo == true){
+        if(abajo == true){ // evaluo si la variable abajo es verdadera muevo el objeto para abajo
 
-            transform.position += Vector3.down * Time.deltaTime * velocidad;
+            transform.position += Vector3.down * Time.deltaTime * velocidad; 
         }
-        else{
+        else{ // evaluo si la variable abajo es falsa muevo el objeto para arriba, pasados 4 segundos se destruye
 
             transform.position += Vector3.up * Time.deltaTime * velocidad;
             Destroy(gameObject, 4f);

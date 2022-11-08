@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     }
     private void Start(){
 
-        isTriple = false;
+        isTriple = false;// de inicio el disparo triple es falso, por lo que jugador arranca disparando un solo rayo
         
     }
     void Update()
@@ -62,14 +62,14 @@ public class Player : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){ // presion de espacio para disparar
 
 
-        if(!isTriple){
+        if(!isTriple){// si isTriple es falso disparo un solo laser
 
             disparar();
 
         }
 
         else{
-            StartCoroutine(activeTripleShot());
+            StartCoroutine(activeTripleShot()); // si es verdadero instancio el triple laser llamando ese metodo
 
         }
         
@@ -85,13 +85,13 @@ private void OnTriggerEnter2D(Collider2D other) {
             
            // asteroide.destroy();
             if(vidas == 1){
-                StartCoroutine("destroyNave");
+                StartCoroutine("destroyNave"); // si vidas llega a 1 el jugador muere
                 
             }
 
             else{
 
-                vidas = vidas - 1;
+                vidas = vidas - 1;// de lo contrario se le resta 1, ya que el jugador desde el inicio arranca con 3 vidas
             }
             
             
@@ -104,7 +104,7 @@ private void OnTriggerEnter2D(Collider2D other) {
             
         }
 
-         else if(other.gameObject.tag == "speed"){
+         else if(other.gameObject.tag == "speed"){ // si colisiona con el power up de velocidad
 
                 Destroy(other.gameObject);
                 StartCoroutine(activeVelocity());
@@ -114,7 +114,7 @@ private void OnTriggerEnter2D(Collider2D other) {
             } 
 
 
-            else if(other.gameObject.tag == "tripleShot"){
+            else if(other.gameObject.tag == "tripleShot"){ // si colisiona con el tripleshot
 
                 Destroy(other.gameObject);
                 sonidoPower.Play();
@@ -122,13 +122,11 @@ private void OnTriggerEnter2D(Collider2D other) {
 
 
             }
-            else if(other.gameObject.tag == "shield"){
+            else if(other.gameObject.tag == "shield"){ // si colisiona con el shield
 
                 Destroy(other.gameObject);
                 sonidoPower.Play();
-                
-
-
+                vidas += 1;
             }
 
             
@@ -143,13 +141,6 @@ private void OnTriggerEnter2D(Collider2D other) {
         sonido.Play(); // sonido de disparo
     }
 
-
-    public void gameOver(){
-
-
-        
-    }
-
     IEnumerator destroyNave(){
 
          yield return new WaitForSeconds(0.6f);
@@ -159,18 +150,18 @@ private void OnTriggerEnter2D(Collider2D other) {
 
 
     IEnumerator activeVelocity(){
-        Speed = Speed *2;
-        yield return new WaitForSeconds(5f);
-        Speed = Speed /2;
+        Speed = Speed *2; // la velocidad se multipla por 2
+        yield return new WaitForSeconds(5f); // durante 5 segundos
+        Speed = Speed /2;// una vez pasados los 5 segundos vuelve a su estado normal
 
     }
 
     IEnumerator activeTripleShot(){
 
         sonido.Play();
-        GameObject tripleDisparo = Instantiate(Triple_Shot, spawnBullet.position, Quaternion.identity);
-        yield return new WaitForSeconds(5f);
-        isTriple = false;
+        GameObject tripleDisparo = Instantiate(Triple_Shot, spawnBullet.position, Quaternion.identity); // se instancia el prefab de triple disparo
+        yield return new WaitForSeconds(5f);// durante 5 segundos
+        isTriple = false;// pasados 5 segundos la variable vuelve a estar falsa para devolverse a 1 solo disparo
 
     }
 

@@ -154,24 +154,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   olas:
-  - waveNames: ola1
-    intervaloTiempo: 5
+  - intervaloTiempo: 5
     enemys: {fileID: 3512286548629555546, guid: 641b94345cbbe5d458b09a70f9a1a3ed, type: 3}
-    spawnerEnemys: {fileID: 393453369}
     cantidadEnemigos: 10
-  - waveNames: ola2
-    intervaloTiempo: 2
+  - intervaloTiempo: 2
     enemys: {fileID: 3512286548629555546, guid: 641b94345cbbe5d458b09a70f9a1a3ed, type: 3}
-    spawnerEnemys: {fileID: 0}
     cantidadEnemigos: 12
-  - waveNames: final
-    intervaloTiempo: 1
+  - intervaloTiempo: 1
     enemys: {fileID: 3577745911502306111, guid: 67c7c75d6521d27468985a14e6579c91, type: 3}
-    spawnerEnemys: {fileID: 3577745911502306111, guid: 67c7c75d6521d27468985a14e6579c91, type: 3}
-    cantidadEnemigos: 5
+    cantidadEnemigos: 3
   cuentas: {fileID: 4960872453797818026, guid: 3dd3379e61d14ac4cae64f7a9f333056, type: 3}
   muertes: 0
-  muertos: 0
 --- !u!4 &36797738
 Transform:
   m_ObjectHideFlags: 0
