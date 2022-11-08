@@ -123,6 +123,69 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36797736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36797738}
+  - component: {fileID: 36797737}
+  m_Layer: 0
+  m_Name: olas
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &36797737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36797736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af27e30e49eae7844afa1e6cf39f827c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contador: 0
+  olas:
+  - waveNames: ola1
+    intervaloTiempo: 5
+    enemys: {fileID: 3512286548629555546, guid: 641b94345cbbe5d458b09a70f9a1a3ed, type: 3}
+    spawnerEnemys: {fileID: 393453369}
+    cantidadEnemigos: 10
+  - waveNames: ola2
+    intervaloTiempo: 2
+    enemys: {fileID: 3512286548629555546, guid: 641b94345cbbe5d458b09a70f9a1a3ed, type: 3}
+    spawnerEnemys: {fileID: 0}
+    cantidadEnemigos: 12
+  - waveNames: final
+    intervaloTiempo: 1
+    enemys: {fileID: 3577745911502306111, guid: 67c7c75d6521d27468985a14e6579c91, type: 3}
+    spawnerEnemys: {fileID: 3577745911502306111, guid: 67c7c75d6521d27468985a14e6579c91, type: 3}
+    cantidadEnemigos: 5
+  cuentas: {fileID: 4960872453797818026, guid: 3dd3379e61d14ac4cae64f7a9f333056, type: 3}
+  muertes: 0
+  muertos: 0
+--- !u!4 &36797738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36797736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.26, y: 1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187226433
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &393453368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys: {fileID: 3512286548629555546, guid: 641b94345cbbe5d458b09a70f9a1a3ed, type: 3}
+  contEnemys: 0
+  cantidadEnemigos: 10
 --- !u!4 &393453369
 Transform:
   m_ObjectHideFlags: 0
@@ -768,7 +833,7 @@ MonoBehaviour:
   destruccion: {fileID: 1140400529}
   sonidoPower: {fileID: 1140400530}
   spawnBullet: {fileID: 397603139}
-  Laser: {fileID: 7049266991657192021, guid: efcc880fd127dcf41913440123846501, type: 3}
+  Laser: {fileID: 4351742564143912721, guid: 3dd3379e61d14ac4cae64f7a9f333056, type: 3}
   Triple_Shot: {fileID: 8256217417143187073, guid: fd64e7f568d9d29418d6ea9c3f0fbe71, type: 3}
   maxY: 3.7
   miny: -3.7

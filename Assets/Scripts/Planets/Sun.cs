@@ -13,7 +13,7 @@ public class Sun : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(-speed * Time.deltaTime, speed, 0); // rotacion de sol
+        transform.Rotate(speed * Time.deltaTime, -speed, 0); // rotacion de sol
         
     }
 }

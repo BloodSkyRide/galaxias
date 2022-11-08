@@ -39,25 +39,29 @@
      <Compile Include="Assets\Scripts\Planets\Sun.cs" />
      <Compile Include="Assets\Sprites\SolarSystemAssets\SolarSystemAssets\Scripts\LookAtTarget.cs" />
      <Compile Include="Assets\Scripts\Planets\Earth.cs" />
+     <Compile Include="Assets\Scripts\Triple_shot.cs" />
      <Compile Include="Assets\Scripts\Parallax.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Generators\Generator.cs" />
      <Compile Include="Assets\Scripts\Lase_Enemy.cs" />
+     <Compile Include="Assets\Scripts\Generators\Generator_Speeds.cs" />
+     <Compile Include="Assets\Scripts\Speeds.cs" />
      <Compile Include="Assets\Scripts\Generators\Generator_Enemy.cs" />
+     <Compile Include="Assets\Scripts\Generators\Generator_Triple_Shot.cs" />
      <Compile Include="Assets\Sprites\SolarSystemAssets\SolarSystemAssets\Scripts\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Planets\Asteroid.cs" />
+     <Compile Include="Assets\Scripts\Generators\Generator_Laser_Enemy.cs" />
+     <Compile Include="Assets\Scripts\Shield.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Generators\Generator_Shields.cs" />
      <Compile Include="Assets\Sprites\SolarSystemAssets\SolarSystemAssets\Scripts\ChangeLookAtTarget.cs" />
+     <Compile Include="Assets\Scripts\Oleadas.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
-     <Compile Include="Assets\Scripts\Generators\Generator_Laser_Enemy.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Speeds.cs" />
-     <Compile Include="Assets\Scripts\Generators\Generator_Speeds.cs" />
-     <Compile Include="Assets\Scripts\Generators\Generator_Triple_Shot.cs" />
-     <Compile Include="Assets\Scripts\Triple_shot.cs" />
      <Compile Include="Assets\Scripts\shot_Triple.cs" />
-     <Compile Include="Assets\Scripts\Shield.cs" />
-     <Compile Include="Assets\Scripts\Generators\Generator_Shields.cs" />
+     <Compile Include="Assets\Scripts\Boss.cs" />
+     <Compile Include="Assets\Scripts\Generators\boss_Bullet.cs" />
+     <Compile Include="Assets\Scripts\Boss_Laser.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.40f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

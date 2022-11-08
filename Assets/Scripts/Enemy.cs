@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
     
 
-
+  private float destrucciones = 7;
     private bool derecha;
   
     
@@ -56,6 +56,17 @@ public class Enemy : MonoBehaviour
 
 
 
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other) {
+      if(other.gameObject.tag == "Laser"){
+
+        Debug.Log("hola colisione con el laser");
+
+        destrucciones -= 1;
+
+      }
     }
 
    

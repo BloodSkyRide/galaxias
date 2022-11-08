@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
      public float minX = -8F;
      float vidas = 3;
     public float Speed = 7f;
+   
 
 
     
@@ -40,7 +41,6 @@ public class Player : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>(); 
     }
-
     private void Start(){
 
         isTriple = false;
@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
         transform.position += movimiento*Time.deltaTime*Speed; //movimiento
 
         // DISPARAR
+
+        
 
         if(Input.GetKeyDown(KeyCode.Space)){ // presion de espacio para disparar
 
